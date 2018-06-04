@@ -1,0 +1,14 @@
+//第一次的解答，一个一个遍历相加
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int len=nums.length;
+        int[] two=new int[2];
+        for(int i=0;i<len;i++){
+            for(int j=i+1;j<len;j++){
+            if(nums[i]+nums[j]==target)  {two[0]=i;two[1]=j;}
+            }
+        }
+        return two;
+    }
+}
+//第二次的解答
