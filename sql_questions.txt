@@ -1,0 +1,11 @@
+Student
+Teacher
+Subjects
+How many students are studying a subject at Grade 3?
+How many subjects does a specific student (e.g. lijin) take?
+Who teaches Grade 3 Math?
+Which subjects are offered in Grade 3?
+How many distinct teachers are teaching Grade 3?
+How many distinct teachers does a student (lijin) have?
+
+设计几个表 然后写出sql命令回答上面的问题
