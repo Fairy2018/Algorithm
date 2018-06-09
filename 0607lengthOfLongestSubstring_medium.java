@@ -37,3 +37,12 @@ class Solution {
         return sblen;
     }
 }
+//改进方案
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int slen=s.length();
+        if(slen==0&&s==null) return 0;
+        HashMap<Character,Integer> hash =new HashMap<>();
+        
+    }
+}
