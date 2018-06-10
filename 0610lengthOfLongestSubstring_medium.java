@@ -43,6 +43,15 @@ class Solution {
         int slen=s.length();
         if(slen==0&&s==null) return 0;
         HashMap<Character,Integer> hash =new HashMap<>();
-        
+        int maxLen=0;
+        int index=0;
+        for(int i=0;i<slen;i++){
+            if(hash.containsKey(s.charAt(i))) {
+                if(maxLen<i-index) maxLen=i-index;
+                int index=hash.get(s.charAt(i))+1;
+            }
+            hash.put(s.charAt(i),i);
+        }
+        return maxLen;
     }
 }
