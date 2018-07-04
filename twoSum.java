@@ -1,4 +1,4 @@
-//µÚÒ»´ÎµÄ½â´ð£¬Ò»¸öÒ»¸ö±éÀúÏà¼Ó
+//ç¬¬ä¸€æ¬¡çš„è§£ç­”ï¼Œä¸€ä¸ªä¸€ä¸ªéåŽ†ç›¸åŠ 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         int len=nums.length;
@@ -11,45 +11,45 @@ class Solution {
         return two;
     }
 }
-/*µÚ¶þÖÖ½â·¨£¬ÏÈÅÅÐòÔÙ½øÐÐ²éÕÒ
-ÆäÊµÕâÖÖ½â·¨ÊÇ´íÎóµÄ¡£
-Òò´ËÅÅÐòÖ®ºó£¬¸÷¸öÊýÖ®¼äµÄÎ»ÖÃÒÑ¾­¸Ä±äÁË£¬Ò²¾ÍÊÇÏÂ±êºÍÖ®Ç°µÄ²»Ò»Ñù¡£
-²»¹ýÎÒÑ§Ï°ÁËÊ²Ã´ÊÇ¿ìËÙÅÅÐò£¬¶øÇÒ¿ìËÙÅÅÐò²»ÓÃ¶îÍâµÄ¿Õ¼ä£¬Ö»ÐèÒªÔÚÔ­À´µÄÊý×éÖÐ½øÐÐÅÅÐò¾ÍÐÐÁË¡£*/
+/*ç¬¬äºŒç§è§£æ³•ï¼Œå…ˆæŽ’åºå†è¿›è¡ŒæŸ¥æ‰¾
+å…¶å®žè¿™ç§è§£æ³•æ˜¯é”™è¯¯çš„ã€‚
+å› æ­¤æŽ’åºä¹‹åŽï¼Œå„ä¸ªæ•°ä¹‹é—´çš„ä½ç½®å·²ç»æ”¹å˜äº†ï¼Œä¹Ÿå°±æ˜¯ä¸‹æ ‡å’Œä¹‹å‰çš„ä¸ä¸€æ ·ã€‚
+ä¸è¿‡æˆ‘å­¦ä¹ äº†ä»€ä¹ˆæ˜¯å¿«é€ŸæŽ’åºï¼Œè€Œä¸”å¿«é€ŸæŽ’åºä¸ç”¨é¢å¤–çš„ç©ºé—´ï¼Œåªéœ€è¦åœ¨åŽŸæ¥çš„æ•°ç»„ä¸­è¿›è¡ŒæŽ’åºå°±è¡Œäº†ã€‚*/
 class Solution{
 public void quickSort(int[] a){
   if(a.length>0){
     quickSort(a,0,a.length-1);
-}
+  }
 }
 public void quickSort(int[] a,int low,int high){
   if(low>high){
     return;
-}
+  }
 int key=a[low];
   int i=low;
   int j=high;
 while(i<j){
     while(i<j&&a[j]>=key) {j--;}    
     while(i<j&&a[i]<=key) {i++;}
-if(i<j){
+    if(i<j){
       int temp=a[high];
       a[high]=key;
       key=temp;
-}
-int p=a[i];
-a[i]=a[low];
-a[low]=p;
-quickSort(a,low,i-1);
-quickSort(a,i+1,high);
-}
+    }
+    int p=a[i];
+    a[i]=a[low];
+    a[low]=p;
+    quickSort(a,low,i-1);
+    quickSort(a,i+1,high);
+  }
 }
   public int[] twoSum(int[] nums,int target){
 int len=nums.length;
 int[] newNums=new int[len];
 int[] two=new int[2];
-//ÅÅÐòËã·¨
+//æŽ’åºç®—æ³•
 quickSort(nums);
-//½øÐÐ²éÕÒ±éÀú
+//è¿›è¡ŒæŸ¥æ‰¾éåŽ†
 int low=0;
 int high=len-1;
 while(low<high){
@@ -62,7 +62,7 @@ if(sum<target) low=low+1;
 return two;
 }
 }
-//µÚÈýÖÖ½â·¨£¬Ê¹ÓÃmap
+//ç¬¬ä¸‰ç§è§£æ³•ï¼Œä½¿ç”¨map
 class Solution{
   public int[] twoSum(int[] nums,int target){
 int len=nums.length;
