@@ -10,4 +10,15 @@ apache是一个web服务器，而tomcat是一个应用服务器；
 apache主要是支持静态页面，而tomcat是用于动态页面的生成？
 apache主要是与web浏览器请求响应的连接，而tomcat主要是对servlet的识别和生命周期的管理？
 又说到涉及到设计模式方面？说没有tomcat，apache无法识别jsp和servlet
-4.
+4.看leetcode的解决方法部分，它的实例代码都会这么写
+List<?,?> list=new ArrayList<>();
+或者是
+Map<?,?> map=new HashMap<>();
+这是多态的用法？所以用这样的语句编程风格会更好？
+5.幂等性是什么？多次执行所产生的影响和一次执行产生的影响相同。
+那为什么不是同样的请求总会得到同样的响应？（因为servlet或者jsp改变了？）
+6.把doPost()方法委托到doGet()方法中有什么好处？
+public void doPost(...) throws ...{
+  doGet(request,response);
+}
+为啥要这样做？
